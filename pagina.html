@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FAQ</title>
+
+    <style>
+.dt_faq_section h3[itemprop="name"] {
+  cursor: pointer;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border: 1px solid #ddd;
+  margin-top: 20px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: -1px;
+}
+
+.flat-bottom {
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+.dt_faq_section [itemprop="acceptedAnswer"] {
+  padding: 10px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border-top: none;
+}
+
+.flat-top {
+  margin-top: 0;
+}
+
+.dt_faq_section [itemprop="acceptedAnswer"] p {
+  margin: 0;
+}
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+  <section class="dt_faq_section">
+    <div itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
+      <h3 itemprop="name">Qual a?</h3>
+      <div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+        <p itemprop="text">Resp a </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="dt_faq_section">
+    <div itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
+      <h3 itemprop="name">Qual b?</h3>
+      <div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+        <p itemprop="text">Resp b </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="dt_faq_section">
+    <div itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
+      <h3 itemprop="name">Qual c?</h3>
+      <div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+        <p itemprop="text">Resp c </p>
+      </div>
+    </div>
+  </section>
+
+<script>
+jQuery(document).ready(function() {
+  // Oculta todas as respostas quando a página é carregada
+  jQuery('.dt_faq_section [itemprop="acceptedAnswer"]').hide();
+
+  // Adiciona um evento de clique aos títulos das perguntas
+  jQuery('.dt_faq_section h3[itemprop="name"]').click(function() {
+    // Alterna a visibilidade da resposta correspondente
+    jQuery(this).next('[itemprop="acceptedAnswer"]').slideToggle();
+    // Alterna a classe para ajustar os estilos de borda
+    jQuery(this).toggleClass('flat-bottom');
+    jQuery(this).next('[itemprop="acceptedAnswer"]').toggleClass('flat-top');
+  });
+});
+</script>
+</body>
+</html>
