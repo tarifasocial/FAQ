@@ -44,29 +44,33 @@
 </head>
 
 <body>
+
+<input type="text" id="busca" placeholder="Buscar pergunta..."
+  style="width: 280px; padding: 8px; font-size: 16px; border: 1px solid #ccc; border-radius: 6px;">
+
   <section class="dt_faq_section">
     <div itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
-      <h3 itemprop="name">Qual a?</h3>
+      <h3 itemprop="name">Primeira dúvida?</h3>
       <div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
-        <p itemprop="text">Resp a </p>
+        <p itemprop="text">Resposta 1</p>
       </div>
     </div>
   </section>
 
   <section class="dt_faq_section">
     <div itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
-      <h3 itemprop="name">Qual b?</h3>
+      <h3 itemprop="name">Segunda dúvida?</h3>
       <div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
-        <p itemprop="text">Resp b </p>
+        <p itemprop="text">Resposta 2</p>
       </div>
     </div>
   </section>
 
   <section class="dt_faq_section">
     <div itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
-      <h3 itemprop="name">Qual c?</h3>
+      <h3 itemprop="name">Terceira dúvida?</h3>
       <div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
-        <p itemprop="text">Resp c </p>
+        <p itemprop="text">Resposta 3 </p>
       </div>
     </div>
   </section>
@@ -85,6 +89,21 @@ jQuery(document).ready(function() {
     jQuery(this).next('[itemprop="acceptedAnswer"]').toggleClass('flat-top');
   });
 });
+  $('#busca').on('keyup', function() {
+  var termo = $(this).val().toLowerCase();
+
+  $('.dt_faq_section').each(function() {
+    var pergunta = $(this).find('h3[itemprop="name"]').text().toLowerCase();
+    var resposta = $(this).find('[itemprop="text"]').text().toLowerCase();
+
+    if (pergunta.includes(termo) || resposta.includes(termo)) {
+      $(this).show();
+    } else {
+      $(this).hide();
+    }
+  });
+});
+
 </script>
 </body>
 </html>
