@@ -3,344 +3,270 @@
 <head>
     <meta charset="UTF-8">
     <title>FAQ</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
 
-    <style>
-.dt_faq_section h3[itemprop="name"] {
-  cursor: pointer;
-  background-color: #f9f9f9;
-  padding: 10px;
-  border: 1px solid #ddd;
-  margin-top: 20px;
-  border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin-bottom: -1px;
-}
-
-.flat-bottom {
-  border-bottom-left-radius: 0 !important;
-  border-bottom-right-radius: 0 !important;
-}
-
-.dt_faq_section [itemprop="acceptedAnswer"] {
-  padding: 10px;
-  border: 1px solid #ddd;
-  background-color: #fff;
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  border-top: none;
-}
-
-.flat-top {
-  margin-top: 0;
-}
-
-.dt_faq_section [itemprop="acceptedAnswer"] p {
-  margin: 0;
-}
-    </style>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
 
-<input type="text" id="busca" placeholder="Buscar pergunta..."
+<input type="text" id="busca" aria-label="Buscar pergunta" placeholder="Buscar pergunta..."
   style="width: 280px; padding: 8px; font-size: 16px; border: 1px solid #ccc; border-radius: 6px;">
 
-  <section class="dt_faq_section">
-    <div itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
-      <h3 itemprop="name">O que é a Tarifa Residencial Social? </h3>
-      <div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
-        <p itemprop="text">A Tarifa Residencial Social é um benefício que concede descontos
-          nas tarifas de água e esgoto para famílias de baixa renda, visando garantir o acesso
-          a serviços básicos essenciais com modicidade tarifária.</p>
-      </div>
+<section class="dt_faq_section">
+  <div itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+    <h3 itemprop="name">O que é a Tarifa Residencial Social?</h3>
+    <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+      <p itemprop="text">A Tarifa Residencial Social é um benefício que concede descontos nas tarifas de água e esgoto para famílias de baixa renda, visando garantir o acesso a serviços básicos essenciais com modicidade tarifária.</p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="dt_faq_section">
-    <div itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
-      <h3 itemprop="name">Quais são os descontos mínimos obrigatórios que o prestador
-        de serviços deve oferecer? </h3>
-      <div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
-        <p itemprop="text">
-          <ul>
-            <li>50% de desconto para consumo de até 15 m³/mês.</li>
-            <li>25% de desconto para consumo entre 15 m³ e 20 m³/mês.</li>
-          </ul>
-        Para consumos superiores a 20 m³/mês, aplica-se o valor normal da tarifa, mas o
-        benefício não é perdido.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <section class="dt_faq_section">
-    <div itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
-      <h3 itemprop="name">O prestador de serviços pode oferecer descontos maiores
-        que o mínimo obrigatório? </h3>
-      <div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
-        <p itemprop="text">Sim. A adoção de descontos maiores que o mínimo obrigatório
-          é permitida, observadas a razoabilidade e modicidade tarifária em relação
-          aos demais usuários, visto que o financiamento do benefício se dá majoritariamente
-          por meio de subsídios entre as categorias. </p>
-      </div>
-    </div>
-  </section>
-
-  <section class="dt_faq_section">
-    <div itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
-      <h3 itemprop="name">Quem pode ser beneficiado pela Tarifa Residencial Social? </h3>
-      <div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
-        <p itemprop="text">Usuários com renda per capita de até 1/2 salário-mínimo que:
+<section class="dt_faq_section">
+  <div itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+    <h3 itemprop="name">Quais são os descontos mínimos obrigatórios que o prestador de serviços deve oferecer?</h3>
+    <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+      <p itemprop="text">
         <ul>
+          <li>50% de desconto para consumo de até 15 m³/mês.</li>
+          <li>25% de desconto para consumo entre 15 m³ e 20 m³/mês.</li>
+        </ul>
+        Para consumos superiores a 20 m³/mês, aplica-se o valor normal da tarifa apenas nos volumes acima de 20 m³, sendo que para os volumes inferiores a 20 m³ aplicam-se os valores com descontos acima indicados.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="dt_faq_section">
+  <div itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+    <h3 itemprop="name">O prestador de serviços pode oferecer descontos maiores que o mínimo obrigatório?</h3>
+    <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+      <p itemprop="text">Sim. A adoção de descontos maiores que o mínimo obrigatório é permitida, observadas a razoabilidade e modicidade tarifária em relação aos demais usuários, visto que o financiamento do benefício se dá majoritariamente por meio de subsídios entre as categorias.</p>
+    </div>
+  </div>
+</section>
+
+<section class="dt_faq_section">
+  <div itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+    <h3 itemprop="name">Quem pode ser beneficiado pela Tarifa Residencial Social?</h3>
+    <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+      <p itemprop="text">
+        Usuários com renda per capita de até 1/2 salário-mínimo que:
+      </p>
+      <ul itemprop="text">
         <li>Estejam inscritos no CADÚnico ou;</li>
-        <li>Tenham membros na família que recebam Benefício de Prestação Continuada (BPC). </li>
-        </ul>
-        </p>
-      </div>
+        <li>Tenham membros na família que recebam Benefício de Prestação Continuada (BPC).</li>
+      </ul>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="dt_faq_section">
-    <div itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
-      <h3 itemprop="name">O prestador de serviços pode adotar outros critérios de elegibilidade?</h3>
-      <div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
-        <p itemprop="text">Sim. O prestador de serviços pode adotar outros critérios de
-          elegibilidade, desde que mantidos os critérios originais e que os novos apenas
-          ampliem o acesso ao benefício. Deve-se observar ainda a razoabilidade e
-          modicidade tarifária em relação aos demais usuários, visto que o financiamento
-          do benefício se dá majoritariamente por meio de subsídios entre as categorias.</p>
-      </div>
+<section class="dt_faq_section">
+  <div itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+    <h3 itemprop="name">O prestador de serviços pode adotar outros critérios de elegibilidade?</h3>
+    <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+      <p itemprop="text">Sim. O prestador de serviços pode adotar outros critérios de elegibilidade, desde que mantidos os critérios originais e que os novos apenas ampliem o acesso ao benefício. Deve-se observar ainda a razoabilidade e modicidade tarifária em relação aos demais usuários, visto que o financiamento do benefício se dá majoritariamente por meio de subsídios entre as categorias.</p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="dt_faq_section">
-    <div itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
-      <h3 itemprop="name">Como identificar as unidades usuárias elegíveis? </h3>
-      <div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
-        <p itemprop="text">
-          <ul>
-          <li>O prestador deve cruzar os dados do CADÚnico com o cadastro comercial,
-            utilizando o CPF como “chave” de integração. </li>
-          <li>Para o caso do BPC, até a presente versão destas “Perguntas Frequentes”
-            não há base de dados específica para cruzamento. Desta forma, o prestador
-            de serviços deve receber as solicitações diretamente nos canais de atendimento
-            ou, a seu critério, acessar bases oficiais à sua disposição para cruzamento de
-            dados, respeitados os critérios de elegibilidade. </li>
-          </ul>
-        </p>
-      </div>
+<section class="dt_faq_section">
+  <div itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+    <h3 itemprop="name">Como identificar as unidades usuárias elegíveis?</h3>
+    <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+      <ul itemprop="text">
+        <li>O prestador deve cruzar os dados do CADÚnico com o cadastro comercial, utilizando o CPF como “chave” de integração.</li>
+        <li>Para o caso do BPC, até a presente versão destas “Perguntas Frequentes” não há base de dados específica para cruzamento. Desta forma, o prestador de serviços deve receber as solicitações diretamente nos canais de atendimento ou, a seu critério, acessar bases oficiais à sua disposição para cruzamento de dados, respeitados os critérios de elegibilidade.</li>
+      </ul>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="dt_faq_section">
-    <div itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
-      <h3 itemprop="name">Quem disponibiliza a base de dados do CADÚnico para o cruzamento de dados? </h3>
-      <div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
-        <p itemprop="text">A ARES-PCJ disponibilizará mensalmente aos prestadores de serviços as
-          bases de dados mais atualizadas do CADÚnico, a partir de convênio que possui com a
-          Secretaria Estadual de Desenvolvimento Social. </p>
-      </div>
+
+<section class="dt_faq_section">
+  <div itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+    <h3 itemprop="name">Quem disponibiliza a base de dados do CADÚnico para o cruzamento de dados?</h3>
+    <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+      <p itemprop="text">A ARES-PCJ disponibilizará mensalmente aos prestadores de serviços as bases de dados mais atualizadas do CADÚnico, a partir de convênio que possui com a Secretaria Estadual de Desenvolvimento Social.</p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="dt_faq_section">
-    <div itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
-      <h3 itemprop="name">Como faço para acessar a base de dados do CADÚnico
-        disponibilizada pela ARES-PCJ? </h3>
-      <div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
-        <p itemprop="text">Para o acesso à base de dados, o prestador de serviços deve
-          encaminhar o Termo de Responsabilidade e o(s) Termo(s) de Compromisso de
-          utilização dos dados devidamente assinados através da Plataforma de Protocolo
-          da ARES-PCJ (1Doc).</p>
-        <p itemprop="text">Após este envio, será compartilhado com os e-mails indicados o acesso a uma
-          pasta virtual permanente, onde poderá realizar mensalmente o download do arquivo
-          com a base de dados mais atualizada. </p>
-      </div>
+<section class="dt_faq_section">
+  <div itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+    <h3 itemprop="name">Como faço para acessar a base de dados do CADÚnico disponibilizada pela ARES-PCJ?</h3>
+    <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+      <p itemprop="text">Para o acesso à base de dados, o prestador de serviços deve encaminhar o Termo de Responsabilidade e o(s) Termo(s) de Compromisso de Manutenção de Sigilo de utilização dos dados devidamente assinados através da Plataforma de Protocolo da ARES-PCJ (1Doc).<br>
+      Após este envio, a equipe da ARES-PCJ avaliará os Termos e, estando em conformidade, será compartilhado com os e-mails indicados o acesso a uma pasta virtual permanente, onde poderá realizar mensalmente o download do arquivo com a base de dados mais atualizada disponibilizada pela Secretaria de Desenvolvimento Social do Estado (SEDS).</p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="dt_faq_section">
-    <div itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
-      <h3 itemprop="name">O que acontece se o usuário deixar de ser elegível? </h3>
-      <div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
-        <p itemprop="text">O prestador deve notificar o usuário na fatura imediatamente
-          subsequente. O benefício será cancelado após três meses, caso as condições de
-          elegibilidade não sejam restabelecidas. </p>
-      </div>
+<section class="dt_faq_section">
+  <div itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+    <h3 itemprop="name">O que acontece se o usuário deixar de ser elegível?</h3>
+    <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+      <p itemprop="text">O prestador deve notificar o usuário na fatura imediatamente subsequente. O benefício será cancelado após três meses, caso as condições de elegibilidade não sejam restabelecidas.</p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="dt_faq_section">
-    <div itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
-      <h3 itemprop="name">Como o cadastramento automático deve ser implementado? </h3>
-      <div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
-        <p itemprop="text">O cadastramento automático deve:
-          <ul>
-          <li>Ser feito a partir da integração das bases de dados do CADÚnico e do
-            cadastro comercial. </li>
-          <li>Seguir Procedimento Operacional Padrão (POP) elaborado e enviado à ARES-PCJ. </li>
-          </ul>
-        </p>
-      </div>
+<section class="dt_faq_section">
+  <div itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+    <h3 itemprop="name">Como o cadastramento automático deve ser implementado?</h3>
+    <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+      <p itemprop="text">O cadastramento automático deve:</p>
+      <ul itemprop="text">
+        <li>Ser feito a partir da integração das bases de dados do CADÚnico e do cadastro comercial.</li>
+        <li>Seguir Procedimento Operacional Padrão (POP) elaborado e enviado à ARES-PCJ.</li>
+      </ul>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="dt_faq_section">
-    <div itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
-      <h3 itemprop="name">Qual o prazo para implementação do POP?</h3>
-      <div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
-        <p itemprop="text">
-          <ul>
-          <li>90 dias para prestadores em municípios com mais de 100.000 habitantes.</li>
-          <li>120 dias para prestadores em municípios com até 100.000 habitantes.</li>
-          </ul>
-        </p>
-      </div>
+<section class="dt_faq_section">
+  <div itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+    <h3 itemprop="name">Quais elementos mínimos devem ser contemplados no POP?</h3>
+    <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+      <p itemprop="text">O POP deve ser elaborado de forma detalhada e padronizada, com o objetivo de orientar a execução correta do procedimento adotado pelo prestador de serviços para o cadastramento automático. A ARES-PCJ disponibiliza (apenas a título de exemplo) um modelo de POP aos prestadores, para que possam adequá-lo aos seus procedimentos internos, ferramentas utilizadas e responsáveis e cargos envolvidos no processo.</p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="dt_faq_section">
-    <div itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
-      <h3 itemprop="name">O que deve ser feito para usuários não cadastrados automaticamente?</h3>
-      <div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
-        <p itemprop="text">Os usuários podem solicitar o benefício diretamente ao prestador, apresentando:
-        <ul>
-        <li>Documento oficial de identificação;</li>
-        <li>Comprovante de inscrição no CADÚnico ou equivalente.</li>
-        </ul>
-        </p>
-      </div>
+<section class="dt_faq_section">
+  <div itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+    <h3 itemprop="name">O que deve ser feito para usuários não cadastrados automaticamente?</h3>
+    <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+      <p itemprop="text">
+        Os usuários podem solicitar o benefício diretamente ao prestador de serviços, apresentando o documento oficial de identificação do responsável familiar e um dos seguintes documentos:
+      </p>
+      <ul itemprop="text">
+        <li>Comprovante de cadastramento no CADÚnico;</li>
+        <li>Cartão de beneficiário do BPC; ou</li>
+        <li>Extrato de pagamento de benefício ou declaração fornecida pelo Instituto Nacional do Seguro Social (INSS) ou outro regime de previdência social público ou privado.</li>
+      </ul>
+      <p>Reforçamos que o prestador de serviços não poderá exigir documentos diversos daqueles acima indicados para a classificação e a atualização das unidades usuárias na Tarifa Residencial Social.</p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="dt_faq_section">
-    <div itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
-      <h3 itemprop="name">Qual é o prazo para inclusão após solicitação direta?</h3>
-      <div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
-        <p itemprop="text">O prestador deve efetivar a inclusão em até 10 dias, desde
-          que os critérios mínimos sejam atendidos. </p>
-      </div>
+<section class="dt_faq_section">
+  <div itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+    <h3 itemprop="name">Qual é o prazo para inclusão após solicitação direta?</h3>
+    <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+      <p itemprop="text">
+        O prestador deve efetivar a inclusão em até 10 dias após a solicitação de cadastro, desde que os critérios mínimos sejam atendidos.
+      </p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="dt_faq_section">
-    <div itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
-      <h3 itemprop="name">Como proceder com unidades multifamiliares não individualizadas?</h3>
-      <div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
-        <p itemprop="text">Para usuários em unidades multifamiliares servidas por
-          medidor único, o prestador deve:
-          <ul>
-          <li>Implementar mecanismos como cashback ou discriminar os benefícios na fatura. </li>
-          <li>Garantir a inclusão de economias elegíveis, conforme os critérios do CADÚnico.</li>
-          </ul>
-        </p>
-      </div>
+<section class="dt_faq_section">
+  <div itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+    <h3 itemprop="name">Como proceder com unidades multifamiliares não individualizadas?</h3>
+    <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+      <p itemprop="text">
+        Os usuários residentes em unidades multifamiliares servidas por medidor único sem individualização e que cumpram os critérios de elegibilidade para acesso à Tarifa Residencial Social poderão requerer sua inclusão diretamente ao prestador de serviços, a qualquer tempo e informar o endereço completo de sua residência, incluindo complementos de número de casa, bloco e/ou apartamento, no que couber.
+      </p>
+      <p>
+        O prestador de serviços deve adotar ao menos um dos seguintes procedimentos para efetivação da concessão dos benefícios aos usuários residentes em unidades multifamiliares:
+      </p>
+      <ul itemprop="text">
+        <li>Individualização da unidade usuária, considerada a viabilidade técnica e econômico-financeira;</li>
+        <li>Discriminação na fatura de água e esgoto da unidade multifamiliar do quantitativo das economias residenciais beneficiadas e o valor total correspondente a cada categoria;</li>
+        <li>Classificação integral da unidade multifamiliar não individualizada na Tarifa Residencial Social quando caracterizada como de interesse social.</li>
+      </ul>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="dt_faq_section">
-    <div itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
-      <h3 itemprop="name">Como a inadimplência afeta o benefício? </h3>
-      <div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
-        <p itemprop="text">O usuário inadimplente mantém o direito ao benefício, mas
-          pode ter o fornecimento de água suspenso conforme previsto na Resolução
-          ARES-PCJ nº 50/2014. </p>
-      </div>
+<section class="dt_faq_section">
+  <div itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+    <h3 itemprop="name">Como a inadimplência afeta o benefício?</h3>
+    <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+      <p itemprop="text">
+        O usuário inadimplente mantém o direito ao benefício, mas pode ter o fornecimento de água suspenso conforme previsto na Resolução ARES-PCJ nº 50/2014.
+      </p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="dt_faq_section">
-    <div itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
-      <h3 itemprop="name">Quais são as penalidades para irregularidades?</h3>
-      <div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
-        <p itemprop="text">Beneficiários que cometerem irregularidades, como intervenções
-          nos sistemas de água e esgoto ou fornecimento de informações falsas, podem
-          perder o benefício por até 12 meses, após a conclusão de processo administrativo. </p>
-      </div>
+<section class="dt_faq_section">
+  <div itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+    <h3 itemprop="name">Quais são as penalidades para irregularidades?</h3>
+    <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+      <p itemprop="text">
+        Beneficiários que cometerem irregularidades, como intervenções nos sistemas de água e esgoto ou fornecimento de informações falsas, podem perder o benefício por até 12 meses, após a conclusão de processo administrativo.
+      </p>
     </div>
-  </section>
+  </div>
+</section>
 
-
-  <section class="dt_faq_section">
-    <div itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
-      <h3 itemprop="name">Como reportar os dados de implementação à ARES-PCJ? </h3>
-      <div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
-        <p itemprop="text">Os prestadores devem enviar mensalmente:
-          <ul>
-          <li>Número de beneficiários incluídos e excluídos. </li>
-          <li>Dados de volume e faturamento da categoria Residencial Social.</li>
-          <li>Informações sobre inadimplência e suspensão de serviços</li>
-          </ul>
-        </p>
-      </div>
+<section class="dt_faq_section">
+  <div itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+    <h3 itemprop="name">Como deve ser feita a divulgação da Tarifa Residencial Social?</h3>
+    <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+      <p itemprop="text">A divulgação deve ser ampla e incluir:</p>
+      <ul>
+        <li>Faturas mensais;</li>
+        <li>Site oficial do prestador;</li>
+        <li>Redes sociais e canais digitais;</li>
+        <li>Postos de atendimento físico.</li>
+      </ul>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="dt_faq_section">
-    <div itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
-      <h3 itemprop="name">Como deve ser feita a divulgação da Tarifa Residencial Social?</h3>
-      <div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
-        <p itemprop="text">A divulgação deve ser ampla e incluir:
-          <ul>
-          <li>Faturas mensais;</li>
-          <li>Site oficial do prestador;</li>
-          <li>Redes sociais e canais digitais;</li>
-          <li>Postos de atendimento físico.</li>
-          </ul>
-        </p>
-      </div>
+<section class="dt_faq_section">
+  <div itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+    <h3 itemprop="name">Como será financiada a Tarifa Residencial Social?</h3>
+    <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+      <p itemprop="text">
+        O benefício será financiado por subsídio tarifário, rateado entre as demais categorias de consumidores. Os prestadores de serviços têm direito à recomposição econômico-financeira, conforme os processos de revisão e reajuste tarifários nos termos das Resoluções ARES-PCJ nº 435/2022 e 303/2019.
+      </p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="dt_faq_section">
-    <div itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
-      <h3 itemprop="name">Como será financiada a Tarifa Residencial Social? </h3>
-      <div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
-        <p itemprop="text">O benefício será financiado por subsídio tarifário, rateado
-          entre as demais categorias de consumidores. Os prestadores têm direito à
-          recomposição econômico-financeira, conforme os processos de revisão e reajuste
-          tarifários.
-          <ul>
-          <li>Descontos Cumulativos após 20 m³ (§1º do Art. 3º) </li>
-          <li>Periodicidade e Cadastro mais atualizado </li>
-          </ul>
-        </p>
-      </div>
+<section class="dt_faq_section">
+  <div itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+    <h3 itemprop="name">Como reportar os dados de implementação à ARES-PCJ?</h3>
+    <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+      <p itemprop="text">Os prestadores de serviços devem enviar mensalmente, por meio do sistema de gestão regulatória:</p>
+      <ul>
+        <li>Número de unidades beneficiadas pela Tarifa Residencial Social (por modalidade de acesso, incluindo eventuais critérios complementares aos mínimos);</li>
+        <li>Número de beneficiários incluídos e excluídos;</li>
+        <li>Dados de volume e faturamento da categoria Residencial Social;</li>
+        <li>Informações sobre inadimplência e suspensão de serviços.</li>
+      </ul>
     </div>
-  </section>
+  </div>
+</section>
 
-<script>
-jQuery(document).ready(function() {
-  // Oculta todas as respostas quando a página é carregada
-  jQuery('.dt_faq_section [itemprop="acceptedAnswer"]').hide();
+<section class="dt_faq_section">
+  <div itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+    <h3 itemprop="name">Como ARES-PCJ irá fiscalizar os prestadores?</h3>
+    <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+      <p itemprop="text">
+        A ARES-PCJ fiscalizará o cumprimento da Resolução nº 592/2024 no âmbito das atividades de fiscalização direta periódica da Agência, por demandas de Ouvidoria e denúncias e pelo monitoramento mensal das informações enviadas.
+      </p>
+      <p>
+        Serão passíveis de fiscalização, dentre outros, aspectos da implementação da norma como:
+      </p>
+      <ul>
+        <li>Existência de procedimento operacional relacionado ao cadastramento automático e a própria integração e classificação automática das unidades usuárias;</li>
+        <li>Critérios de elegibilidade utilizados para concessão dos benefícios e descontos adequados;</li>
+        <li>Conformidade dos procedimentos de exclusão dos benefícios por irregularidades;</li>
+        <li>Cadastramento de usuários elegíveis residentes em unidades multifamiliares não individualizadas;</li>
+        <li>Divulgação do benefício;</li>
+        <li>Envio mensal de dados à Agência Reguladora.</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-  // Adiciona um evento de clique aos títulos das perguntas
-  jQuery('.dt_faq_section h3[itemprop="name"]').click(function() {
-    // Alterna a visibilidade da resposta correspondente
-    jQuery(this).next('[itemprop="acceptedAnswer"]').slideToggle();
-    // Alterna a classe para ajustar os estilos de borda
-    jQuery(this).toggleClass('flat-bottom');
-    jQuery(this).next('[itemprop="acceptedAnswer"]').toggleClass('flat-top');
-  });
-});
-  $('#busca').on('keyup', function() {
-  var termo = $(this).val().toLowerCase();
-
-  $('.dt_faq_section').each(function() {
-    var pergunta = $(this).find('h3[itemprop="name"]').text().toLowerCase();
-    var resposta = $(this).find('[itemprop="text"]').text().toLowerCase();
-
-    if (pergunta.includes(termo) || resposta.includes(termo)) {
-      $(this).show();
-    } else {
-      $(this).hide();
-    }
-  });
-});
-
-</script>
+<script src="script.js"></script>
 </body>
 </html>
